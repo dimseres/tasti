@@ -55,7 +55,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.mailru',
     'allauth.socialaccount.providers.vk',
-    'api'
+    'api',
+    'pool'
 ]
 
 MIDDLEWARE = [
