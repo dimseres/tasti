@@ -9,6 +9,7 @@ class Answer(models.Model):
     question_id = models.ForeignKey(Question, on_delete=models.CASCADE, null=False)
     content = models.TextField(null=True)
     active = models.BooleanField(default=True)
+    is_correct = models.BooleanField(blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True, null=True)
     updated_at = models.DateTimeField(auto_now=True, null=True)
 

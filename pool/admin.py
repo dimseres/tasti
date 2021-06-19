@@ -10,7 +10,7 @@ class PoolAdmin(admin.ModelAdmin):
 
 @admin.register(Answer)
 class AnswerAdmin(admin.ModelAdmin):
-    list_display = ('pool_id', 'question_id', 'content', 'created_at')
+    list_display = ('pool_id', 'question_id', 'content', 'is_correct', 'created_at')
     search_fields = ('content',)
 
 
@@ -18,11 +18,6 @@ class AnswerAdmin(admin.ModelAdmin):
 class QuestionAdmin(admin.ModelAdmin):
     list_display = ('pool_id', 'type', 'content', 'created_at')
     search_fields = ('content',)
-
-
-@admin.register(CorrectAnswer)
-class CorrectAnswers(admin.ModelAdmin):
-    list_display = ('question_id', 'answer_id', 'is_correct', 'created_at')
 
 
 @admin.register(Vote)
