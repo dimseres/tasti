@@ -1,6 +1,7 @@
 from django.urls import path, include
-from .views import api_courses
+from .views import CourseView, CourseAPI
 
 urlpatterns = [
-    path('all/', api_courses)
+    path('all/', CourseView.as_view()),
+    path('create/', CourseAPI.as_view())
 ]

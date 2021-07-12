@@ -11,6 +11,7 @@ class CourseMessageAttachedFile(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
+        db_table = 'course_message_attached_file'
         verbose_name_plural = 'Прикрепленные файлы сообщений'
         verbose_name = 'Прикрепленный файл сообщения'
         ordering = ['-created_at']

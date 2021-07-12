@@ -11,6 +11,7 @@ class CourseTaskAttachedFile(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
+        db_table = 'course_task_attach_file'
         verbose_name_plural = 'Прикрепленные файлы задания'
         verbose_name = 'Прикрепленный файл задания'
         ordering = ['-created_at']

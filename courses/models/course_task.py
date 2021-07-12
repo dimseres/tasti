@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from .course import Course
-from pool.models import Pool
+from polls.models import Pool
 
 
 class CourseTask(models.Model):
@@ -14,6 +14,7 @@ class CourseTask(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
+        db_table = 'course_task'
         verbose_name_plural = 'Задания курса'
         verbose_name = 'Задание курса'
         ordering = ['-created_at']

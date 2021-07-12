@@ -11,6 +11,7 @@ class CourseMessageComment(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
+        db_table = 'course_message_comment'
         verbose_name_plural = 'Коментарии курса'
         verbose_name = 'Комментарий курса'
         ordering = ['-created_at']

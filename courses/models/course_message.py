@@ -12,6 +12,7 @@ class CourseMessage(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
+        db_table = 'course_message'
         verbose_name_plural = 'Сообщения курса'
         verbose_name = 'Сообщение курса'
         ordering = ['-created_at']

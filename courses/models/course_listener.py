@@ -10,6 +10,7 @@ class CourseListener(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
+        db_table = 'course_listener'
         verbose_name_plural = 'Слушатели курса'
         verbose_name = 'Слушатель курса'
         ordering = ['-created_at']

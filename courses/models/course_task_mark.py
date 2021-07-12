@@ -11,6 +11,7 @@ class CourseTaskMark(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
+        db_table = 'course_task_mark'
         verbose_name_plural = 'Оценки к заданию'
         verbose_name = 'Оценка задания'
         ordering = ['-created_at']
