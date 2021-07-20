@@ -14,6 +14,9 @@ class UserInfo(serializers.ModelSerializer):
         model = User
         fields = ['first_name']
 
+# class UserProfile(serializers.ModelSerializer):
+#     user = UserProfile(source='')
+
 
 class CourseAll(serializers.ModelSerializer):
     # course_meta = serializers.PrimaryKeyRelatedField(many=True, read_only=True)

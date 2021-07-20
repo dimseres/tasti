@@ -53,10 +53,10 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'rest_framework',
     'rest_framework_simplejwt',
+    'accounts',
     'api',
     'polls',
-    'courses',
-    'accounts'
+    'courses'
 ]
 
 CORS_ORIGIN_WHITELIST = [
@@ -88,6 +88,8 @@ REST_FRAMEWORK = {
     )
 }
 
+AUTH_USER_MODEL = 'accounts.User'
+
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
@@ -115,7 +117,6 @@ SIMPLE_JWT = {
     'SLIDING_TOKEN_LIFETIME': timedelta(minutes=5),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
-
 
 # JWT_AUTH = {
 #     'JWT_SECRET_KEY': md5(os.getenv('JWT_SECRET_WORD').encode(encoding='utf-8'))
@@ -203,7 +204,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'UTC'
 

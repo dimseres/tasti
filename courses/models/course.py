@@ -1,6 +1,6 @@
 from django.db import models
 from django.core import validators
-from django.contrib.auth.models import User
+from accounts.models import User
 from hashlib import sha1
 from base64 import b64encode
 import short_url
