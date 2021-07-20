@@ -1,6 +1,7 @@
 from django.db import models
 from accounts.models import User
 from .course import Course
+from django.contrib.contenttypes.fields import GenericRelation
 
 
 class CourseMessage(models.Model):
@@ -8,8 +9,10 @@ class CourseMessage(models.Model):
     author_id = models.ForeignKey(User, on_delete=models.PROTECT)
     text = models.TextField()   # RAW Format must exclude specials chars before publish
     is_pinned = models.BooleanField(default=False)
+    comments = GenericRelation('CourseComment')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
 
     class Meta:
         db_table = 'course_message'

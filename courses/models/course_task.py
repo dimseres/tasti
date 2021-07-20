@@ -2,6 +2,7 @@ from django.db import models
 from accounts.models import User
 from .course import Course
 from polls.models import Pool
+from django.contrib.contenttypes.fields import GenericRelation
 
 
 class CourseTask(models.Model):
@@ -10,6 +11,7 @@ class CourseTask(models.Model):
     description = models.TextField(null=True)
     bound_pool = models.ForeignKey(Pool, null=True, on_delete=models.PROTECT)
     author_id = models.ForeignKey(User, on_delete=models.PROTECT)
+    comments = GenericRelation('CourseComment')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

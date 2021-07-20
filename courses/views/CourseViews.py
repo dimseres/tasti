@@ -6,7 +6,7 @@ from django.http.request import HttpRequest
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from rest_framework.generics import (ListCreateAPIView, RetrieveUpdateDestroyAPIView)
+from rest_framework.generics import (ListCreateAPIView, RetrieveUpdateDestroyAPIView, CreateAPIView)
 from rest_framework.permissions import IsAuthenticated
 from ..models import Course
 from ..serializers import CourseAll, CoursePost
@@ -19,10 +19,10 @@ class CourseView(APIView):
         return Response(serializer.data)
 
 
-class CourseAPI(ListCreateAPIView):
+class CourseAPI(CreateAPIView):
     queryset = Course.objects.all()
     serializer_class = CoursePost
-    permission_classes = (IsAuthenticated,)
+    # permission_classes = (IsAuthenticated,)
 
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)

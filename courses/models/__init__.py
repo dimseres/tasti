@@ -4,8 +4,7 @@ from .course_attach_file import CourseAttachedFile
 from .course_task import CourseTask
 from .course_task_attach_file import CourseTaskAttachedFile
 from .course_task_mark import CourseTaskMark
-from .course_task_comment import CourseTaskComment
+from .comment import CourseComment
 from .course_message import CourseMessage
 from .course_message_attach_file import CourseMessageAttachedFile
-from .course_message_comment import CourseMessageComment
 from .course_listener import CourseListener
