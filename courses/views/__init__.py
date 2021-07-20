@@ -1,1 +1,5 @@
-from .CourseViews import CourseView, CourseAPI
+from .CourseViews import (
+    CourseView,
+    CourseAPI,
+    CourseDetail
+)
