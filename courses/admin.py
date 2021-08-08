@@ -5,6 +5,7 @@ admin.site.register(CourseMessage)
 admin.site.register(CourseComment)
 admin.site.register(CourseTask)
 admin.site.register(CourseListener)
+admin.site.register(CourseMessageAttachedFile)
 
 
 @admin.register(Course)
