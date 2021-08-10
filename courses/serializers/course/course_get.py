@@ -37,13 +37,11 @@ class Comments(serializers.ModelSerializer):
         fields = ['content', 'author']
         # fields = '__all__'
 
-    def get_fields(self):
-        fields = super(Comments, self).get_fields()
-        return fields
 
 class MessageComments(serializers.RelatedField):
     def to_representation(self, value):
         ct = ContentType.objects.get_for_model(value)
+        queryset = ct.coursecomment_set.all()[:3]
         serializer = Comments(value, read_only=True, source='last_comments')
         return serializer.data
 
@@ -55,7 +53,8 @@ class CourseMessages(serializers.ModelSerializer):
 
     # def get_message_count(self, obj):
     #     return obj.comments.
-    message_comments = MessageComments(queryset='comments', source='comments', many=True)
+    # comments = CourseComment.objects.all()[:3]
+    message_comments = MessageComments(source='comments', read_only=True, many=True)
 
     class Meta:
         model = CourseMessage
@@ -72,9 +71,9 @@ class CourseAll(serializers.ModelSerializer):
 
 class CourseDetail(serializers.ModelSerializer):
     course_meta = CourseMeta(source='coursemeta', read_only=True)
-    messages = CourseMessages(source='coursemessage_set', read_only=True, many=True)
+    # messages = CourseMessages(source='coursemessage_set', read_only=True, many=True)
     author = Author(source='author_id', read_only=True)
 
     class Meta:
         model = Course
-        fields = ['id', 'slug', 'title', 'description', 'created_at', 'course_meta', 'author', 'messages']
+        fields = ['id', 'slug', 'title', 'description', 'created_at', 'course_meta', 'author']

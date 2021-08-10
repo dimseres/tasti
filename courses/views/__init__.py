@@ -3,3 +3,6 @@ from .CourseViews import (
     CourseAPI,
     CourseDetail
 )
+from .CommentView import (
+    MessageComments
+)
