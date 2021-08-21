@@ -1,9 +1,11 @@
 <template>
   <div>
     <h1 class="title">Components Page</h1>
-    <hr />
+    <hr/>
     <h2 class="title">Cards</h2>
-    <CourseCard title="I'm Card"/>
+    <div class="course-card__wrapper">
+      <CourseCard v-for="x in 3" :key="x" title="I'm Card"/>
+    </div>
   </div>
 </template>
 
@@ -24,5 +26,12 @@ export default {
   /*font-size: 22px;*/
   text-align: center;
   text-transform: uppercase;
+}
+
+.course-card__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1150px;
+  margin: auto;
 }
 </style>
