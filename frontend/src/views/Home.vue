@@ -1,10 +1,15 @@
 <template>
-  <div>{{ $store.state.course.hello }}</div>
+  <div>
+    <Navbar />
+    <router-view />
+  </div>
 </template>
 
 <script>
+import Navbar from "../components/Navbar";
+
 export default {
   name: "Home",
-  components: {},
+  components: {Navbar},
 };
 </script>

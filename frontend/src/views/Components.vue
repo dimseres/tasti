@@ -4,19 +4,17 @@
     <hr/>
     <h2 class="title">Cards</h2>
     <div class="course-card__wrapper">
-      <CourseCard v-for="x in 3" :key="x" title="I'm Card"/>
+<!--      <CourseCard v-for="x in 3" :key="x" title="I'm Card"/>-->
     </div>
   </div>
 </template>
 
 <script>
-import CourseCard from "@/components/UI/Cards/CourseCard";
+// import CourseCard from "@/components/UI/Cards/CourseCard";
 
 export default {
   name: "Components",
-  components: {
-    CourseCard
-  }
+  components: {}
 }
 </script>
 
