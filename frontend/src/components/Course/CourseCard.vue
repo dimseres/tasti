@@ -32,9 +32,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-* {
-  box-sizing: border-box;
-}
+
 
 .card__course {
   box-shadow: $shadow;
