@@ -18,6 +18,23 @@
     </div>
     <div class="card__content">
       <h3 class="header_title">{{ title }}</h3>
+      <div class="card__info__container">
+        <div class="card__info">
+          <img class="info__icon" src="/icons/24px/student.svg" alt="">
+          <span class="info__description">12 уроков</span>
+        </div>
+        <div class="card__info">
+          <img class="info__icon" src="/icons/24px/pen.svg" alt="">
+          <span class="info__description">12 заданий</span>
+        </div>
+        <div class="card__info">
+          <img class="info__icon" src="/icons/24px/chemistry.svg" alt="">
+          <span class="info__description">2 теста</span>
+        </div>
+      </div>
+    </div>
+    <div class="card__actions">
+      <a href="#" class="card__button">продолжить</a>
     </div>
   </div>
 </template>
@@ -45,6 +62,7 @@ export default {
   //padding: 15px;
   //max-width: 400px;
   transition: .3s;
+
   &:hover {
     transform: translateY(-10px);
   }
@@ -74,6 +92,7 @@ export default {
   border-radius: 50%;
   margin-right: 12px;
   border: 2px solid #fff;
+
   .ava {
     height: 100%;
     width: 100%;
@@ -128,6 +147,17 @@ export default {
   }
 }
 
+.card__info__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card__info {
+  display: flex;
+  align-items: center;
+  padding-right: 12px;
+}
+
 .header__cover {
   position: relative;
   //display: flex;
@@ -138,6 +168,19 @@ export default {
 .card__header {
   flex: 1;
   position: relative;
+}
+
+.card__actions {
+  padding: 15px 20px;
+  display: flex;
+}
+
+.card__button {
+  color: $color_primary;
+  border: 1px solid $color_primary;
+  border-radius: 4px;
+  padding: 10px 20px;
+  display: block;
 }
 
 .cover__container {

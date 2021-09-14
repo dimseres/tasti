@@ -2,12 +2,12 @@
   <div class="navbar">
     <div class="navbar__container content">
       <h1 class="navbar__logo">
-        <router-link :to="{name: 'Home'}" class="home__link">Edugree</router-link>
+        <router-link :to="{name: 'Courses'}" class="home__link">Edugree</router-link>
       </h1>
       <div class="navbar__menu">
         <div class="menu__list">
           <router-link :to="{name: 'Components'}" class="menu__item">Задания</router-link>
-          <router-link :to="{name: 'Home'}" class="menu__item">Курсы</router-link>
+          <router-link :to="{name: 'Courses'}" class="menu__item">Курсы</router-link>
         </div>
         <div class="menu__profile">
           <div class="profile__container">

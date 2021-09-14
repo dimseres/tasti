@@ -1,0 +1,199 @@
+<template>
+  <div>
+      <div class="login__input">
+        <div class="form__input">
+          <BaseInput v-model="login" placeholder="Имя"/>
+        </div>
+        <div class="form__input">
+          <BaseInput v-model="login" placeholder="Email"/>
+        </div>
+        <div class="form__input">
+          <BaseInput v-model="password" placeholder="Пароль" type="password"/>
+        </div>
+        <div class="form__input offert">
+          <input id="offert" type="checkbox" placeholder="Пароль"/>
+          <label for="offert">соглас(ен/на) с правилами и политикой конфедициальности</label>
+        </div>
+      </div>
+      <div class="login__action">
+        <a href="#" class="button__login">Зарегистрироваться</a>
+        <a href="#" class="button__signin">Войти</a>
+      </div>
+  </div>
+</template>
+
+<script>
+import BaseInput from "../UI/BaseInput";
+
+export default {
+  name: "LoginForm",
+  components: {BaseInput},
+  data() {
+    return {
+      login: "",
+      password: ""
+    }
+  }
+}
+</script>
+
+<style scoped lang="scss">
+.login {
+  &__header {
+    border-bottom: 1px solid $color_gray_light;
+    padding: 32px 32px 0px 32px;
+  }
+
+  &__form {
+    background: #fff;
+    width: 474px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04), 0px 4px 16px rgba(51, 51, 51, 0.08);
+    border-radius: 8px;
+  }
+
+  &__title {
+    margin: 0 0 32px 0;
+    font-weight: 900;
+    font-size: 32px;
+  }
+
+  &__input {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__wrapper {
+    padding: 32px;
+  }
+
+  &__socials {
+    background: #fafafa;
+    padding: 12px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__input__wrapper {
+    padding: 0px 32px 32px 32px;
+  }
+
+  &__tabs {
+    display: flex;
+
+    .tab__item {
+      padding-bottom: 32px;
+      margin-right: 20px;
+      display: block;
+      position: relative;
+      transition: .2s;
+      color: $color_gray_dark;
+
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        height: 2px;
+        background: transparent;
+        transition: .2s;
+      }
+
+      &:hover {
+        &::after {
+          background: $color_primary;
+        }
+      }
+    }
+
+    & .active {
+      color: $color_black;
+
+      &::after {
+        background: $color_primary;
+      }
+    }
+  }
+}
+
+.social__title {
+  font-size: 13px;
+}
+
+.socials__wrapper {
+  display: flex;
+}
+
+.auth__social {
+  border-radius: 50%;
+  background: #fff;
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //width: 36px;
+  //height: 36px;
+  margin-left: 8px;
+}
+
+.form__input {
+  width: 100%;
+  margin-top: 20px;
+
+  &.offert {
+    display: flex;
+    align-items: center;
+    label {
+      margin-left: 8px;
+    }
+  }
+}
+
+.button__login {
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 4px;
+  padding: 10px 20px;
+  background: $color_primary;
+  color: #fff;
+  display: block;
+  width: 100%;
+  transition: .2s;
+  &:hover {
+    background: darken($color_primary, 10);
+  }
+}
+
+.button__signin {
+  @extend .button__login;
+  background: transparent;
+  color: $color_primary;
+  //border: 1px solid transparent;
+  width: 100px;
+  margin: 20px auto auto;
+  position: relative;
+  transition: .2s;
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    background: transparent;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    transition: .2s;
+  }
+  &:hover {
+    background: transparent;
+    //border-color: $color_primary;
+    &::after {
+      background: $color_primary;
+    }
+  }
+
+}
+</style>
