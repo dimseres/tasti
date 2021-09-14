@@ -12,7 +12,7 @@
         </div>
         <div class="form__input offert">
           <input id="offert" type="checkbox" placeholder="Пароль"/>
-          <label for="offert">соглас(ен/на) с правилами и политикой конфедициальности</label>
+          <label for="offert" class="offer__label">соглас(ен/на) с правилами и политикой конфедициальности</label>
         </div>
       </div>
       <div class="login__action">
@@ -120,6 +120,10 @@ export default {
 }
 
 .social__title {
+  font-size: 13px;
+}
+
+.offer__label {
   font-size: 13px;
 }
 

@@ -7,12 +7,12 @@ const routes = [
         component: () => import('../views/Home'),
         children: [
             {
-                path: '/',
+                path: '',
                 name: 'Courses',
                 component: () => import('../pages/Courses')
             },
             {
-                path: "/components",
+                path: "components",
                 name: "Components",
                 component: () => import('../views/Components')
             },
@@ -29,7 +29,7 @@ const routes = [
                 component: () => import('../components/Login/LoginForm')
             },
             {
-                path: '/register',
+                path: 'register',
                 name: 'Registration',
                 component: () => import('../components/Login/RegistrationForm')
             },
