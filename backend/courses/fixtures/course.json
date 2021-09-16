@@ -1,0 +1,41 @@
+[
+  {
+    "model": "courses.course",
+    "pk": 1,
+    "fields": {
+      "author_id": 2,
+      "title": "Django",
+      "description": "Django start course",
+      "slug": "uvydqwpovqvqevx",
+      "invitation_link": "AEB9AE13BAE2BBCD823",
+      "created_at": "2021-09-13",
+      "updated_at": "2021-09-13"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 2,
+    "fields": {
+      "author_id": 2,
+      "title": "Linear Math",
+      "description": "Math start course",
+      "slug": "xvydqwpovqvqevx",
+      "invitation_link": "SEB9AE13BAE2BBCD823",
+      "created_at": "2021-09-13",
+      "updated_at": "2021-09-13"
+    }
+  },
+  {
+    "model": "courses.course",
+    "pk": 3,
+    "fields": {
+      "author_id": 3,
+      "title": "SQL for beginners",
+      "description": "SQL start course",
+      "slug": "tvydqwpovqvqevx",
+      "invitation_link": "DEB9AE13BAE2BBCD823",
+      "created_at": "2021-09-13",
+      "updated_at": "2021-09-13"
+    }
+  }
+]
