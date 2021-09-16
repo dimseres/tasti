@@ -9,7 +9,7 @@ class User(AbstractUser):
     avatar = models.ImageField(null=True, blank=True,
                                validators=[validators.FileExtensionValidator(
                                    allowed_extensions=('jpeg', 'jpg', 'png'))],
-                                   error_messages={'invalid_extension': 'Этот формат не поддерживается'})
+                               error_messages={'invalid_extension': 'Этот формат не поддерживается'})
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     pass

@@ -1,0 +1,62 @@
+[
+  {
+    "model": "accounts.user",
+    "pk": 1,
+    "fields": {
+      "username": "superadmin",
+      "first_name": "Dmitrii",
+      "password": "pbkdf2_sha256$260000$dDZGSyOy0I2SqwnUPwrLG5$mbgvtbt86lNXnYkXFU0Xc+Yeah71iW9sTl+Tp+vmQP0=",
+      "is_superuser": 1,
+      "last_name": "Esin",
+      "email": "user1@example.com",
+      "is_staff": 1,
+      "is_active": 1,
+      "date_joined": "2021-09-13",
+      "birth_date": "2021-09-13",
+      "bio": "My short bio for Profile",
+      "avatar": "https://via.placeholder.com/250",
+      "created_at": "2021-09-13",
+      "updated_at": "2021-09-13"
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 2,
+    "fields": {
+      "username": "user1",
+      "first_name": "Vasilii",
+      "password": "pbkdf2_sha256$260000$dDZGSyOy0I2SqwnUPwrLG5$mbgvtbt86lNXnYkXFU0Xc+Yeah71iW9sTl+Tp+vmQP0=",
+      "is_superuser": 0,
+      "last_name": "Pupkin",
+      "email": "user1@example.com",
+      "is_staff": 0,
+      "is_active": 1,
+      "date_joined": "2021-09-13",
+      "birth_date": "2021-09-13",
+      "bio": "My short bio for Profile",
+      "avatar": "https://via.placeholder.com/250",
+      "created_at": "2021-09-13",
+      "updated_at": "2021-09-13"
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 3,
+    "fields": {
+      "username": "user2",
+      "first_name": "John",
+      "password": "pbkdf2_sha256$260000$dDZGSyOy0I2SqwnUPwrLG5$mbgvtbt86lNXnYkXFU0Xc+Yeah71iW9sTl+Tp+vmQP0=",
+      "is_superuser": 0,
+      "last_name": "Cena",
+      "email": "user1@example.com",
+      "is_staff": 0,
+      "is_active": 1,
+      "date_joined": "2021-09-13",
+      "birth_date": "2021-09-13",
+      "bio": "My short bio for Profile",
+      "avatar": "https://via.placeholder.com/250",
+      "created_at": "2021-09-13",
+      "updated_at": "2021-09-13"
+    }
+  }
+]

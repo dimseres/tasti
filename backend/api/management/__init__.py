@@ -1,0 +1,1 @@
+from .commands.seed import Command

@@ -228,6 +228,12 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
+FIXTURE_DIRS = [
+    os.path.join(BASE_DIR, "accounts/fixture/"),
+    os.path.join(BASE_DIR, "courses/fixture/"),
+    os.path.join(BASE_DIR, "polls/fixture/"),
+]
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
