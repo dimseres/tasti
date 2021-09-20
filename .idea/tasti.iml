@@ -15,6 +15,12 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/venv" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/accounts/migrations" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/courses/migrations" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/polls/migrations" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/protego/migrations" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/tasti/static" />
+      <excludeFolder url="file://$MODULE_DIR$/backend/venv" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
