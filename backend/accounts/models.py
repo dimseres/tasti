@@ -10,6 +10,7 @@ class User(AbstractUser):
                                validators=[validators.FileExtensionValidator(
                                    allowed_extensions=('jpeg', 'jpg', 'png'))],
                                error_messages={'invalid_extension': 'Этот формат не поддерживается'})
+    email = models.EmailField(blank=False, unique=True, validators=[validators.EmailValidator()])
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     pass
